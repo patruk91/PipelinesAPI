@@ -32,8 +32,11 @@ steps:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)\tests'
 
+- task: CopyFiles@2
+  inputs:
+    targetFolder: '$(Build.ArtifactStagingDirectory)' 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)\src'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'ReleaseArtifact'
     publishLocation: 'Container'
