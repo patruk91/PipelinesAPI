@@ -19,7 +19,7 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
+      **\tests\*test*.dll
+      !**\tests\*TestAdapter.dll
+      !**\tests\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
