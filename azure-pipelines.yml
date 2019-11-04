@@ -30,4 +30,4 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)\tests\PipelinesAPI.Tests'
+    searchFolder: '$(System.DefaultWorkingDirectory)\tests\*Tests'
