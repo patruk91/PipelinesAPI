@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF508BD7-A00
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F67A4791-C3AD-471A-A777-E2F6A345DD5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelinesAPI.Tests", "tests\PipelinesAPI.Tests\PipelinesAPI.Tests.csproj", "{19A65A2B-162B-4AF9-958A-3182E0DF29AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelinesAPI.Tests", "tests\PipelinesAPI.Tests\PipelinesAPI.Tests.csproj", "{19A65A2B-162B-4AF9-958A-3182E0DF29AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +31,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F6EB3F77-C899-4092-8F27-BD6E47857034} = {EF508BD7-A00F-4610-8CB5-47BFC71054CA}
+		{19A65A2B-162B-4AF9-958A-3182E0DF29AF} = {F67A4791-C3AD-471A-A777-E2F6A345DD5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {489829DB-D3BA-43FA-A263-70299C4642A7}
