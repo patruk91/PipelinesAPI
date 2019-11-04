@@ -15,11 +15,10 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- task: VSTest@2
+
+- task: DotNetCoreCLI@2
+  displayName: tests
   inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: 'tests\$(System.DefaultWorkingDirectory)'
+    command: test
+    projects: '**/tests/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
