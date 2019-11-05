@@ -27,5 +27,13 @@ namespace PipelinesAPI.Tests
             var expected = new string[] { "value1", "value2" };
             Assert.That(actual, Is.EqualTo(expected));
         }
+
+        [Test]
+        public void ReturnValueIsEqualToValue()
+        {
+            var actual = controller.Get(1).Value;
+            var expected = "value";
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
