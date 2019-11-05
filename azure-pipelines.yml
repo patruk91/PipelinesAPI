@@ -24,13 +24,6 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-#- task: DotNetCoreCLI@2
-#  displayName: tests
-#  inputs:
-#    command: test
-#    projects: '**/tests/*Tests/*.csproj'
-#    arguments: '--configuration $(buildConfiguration)'
-
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -40,10 +33,6 @@ steps:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)\tests'
   condition: succeededOrFailed()
-
-#- task: CopyFiles@2
-#  inputs:
-#    targetFolder: '$(Build.ArtifactStagingDirectory)' 
 
 - task: DotNetCoreCLI@2
   displayName: Publish
@@ -60,5 +49,3 @@ steps:
     ArtifactName: 'ReleaseArtifact'
     publishLocation: 'Container'
   condition: succeededOrFailed()
-
-
