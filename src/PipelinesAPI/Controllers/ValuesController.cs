@@ -14,6 +14,7 @@ namespace PipelinesAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            //Return values
             return new string[] { "value1", "value2" };
         }
 
